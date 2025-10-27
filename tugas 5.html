@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 420px;
+    }
+
+    h2 {
+      margin-bottom: 5px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 80px;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .row input, .row select {
+      flex: 1;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 5px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-top: 25px;
+      font-size: 16px;
+    }
+
+    .checkbox-inline {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: black;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    p {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Order Form</h2>
+
+    <label>Name</label>
+    <input type="text" placeholder="John Doe">
+
+    <div class="row">
+      <div>
+        <label>Email</label>
+        <input type="email" placeholder="john.doe@example.com" required>
+      </div>
+      <div>
+        <label>Phone</label>
+        <input type="tel" placeholder="+1 (555) 123-4567" required>
+      </div>
+    </div>
+
+    <div class="section-title">Order Details</div>
+
+    <div class="row">
+      <div>
+        <label>Product</label>
+        <select>
+          <option>Select a product</option>
+          <option>T-Shirt</option>
+          <option>Jacket</option>
+          <option>Shoes</option>
+          <option>Hat</option>
+        </select>
+      </div>
+      <div style="flex: 0.4;">
+        <label>Quantity</label>
+        <input type="number" value="1" min="1">
+      </div>
+    </div>
+
+    <label>Size</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox"> Small</label>
+      <label><input type="checkbox"> Medium</label>
+      <label><input type="checkbox"> Large</label>
+      <label><input type="checkbox"> XL</label>
+    </div>
+
+    <label>Color</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox"> Red</label>
+      <label><input type="checkbox"> Blue</label>
+      <label><input type="checkbox"> Green</label>
+      <label><input type="checkbox"> Black</label>
+    </div>
+
+    <label>Additional Comments</label>
+    <textarea placeholder="Enter any additional comments or instructions"></textarea>
+
+    <div class="section-title">Payment Details</div>
+
+    <label>Payment Method</label>
+    <select>
+      <option>Select a payment method</option>
+      <option>Credit Card</option>
+      <option>Bank Transfer</option>
+      <option>Cash on Delivery</option>
+      <option>PayPal</option>
+    </select>
+
+    <div class="checkbox-inline">
+      <input type="checkbox">
+      <label>I accept the terms and conditions.</label>
+    </div>
+
+    <button type="submit">Submit Order</button>
+  </div>
+</body>
+</html>
